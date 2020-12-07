@@ -1,0 +1,5 @@
+<template>
+    <template if:true={records.data} for:each={records.data} for:item="rd">
+        <div key={rd.Id}>{rd.Id}</div>
+    </template>
+</template>
