@@ -1,0 +1,27 @@
+<aura:component
+        description="TFW_New_Message"
+        implements="flexipage:availableForRecordHome,force:hasRecordId, force:lightningQuickAction">
+
+    <aura:attribute name="caseRecord" type="Object"/>
+    <aura:attribute name="caseFields" type="Object"/>
+    <aura:attribute name="caseRecordError" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.execute}"/>
+
+    <force:recordData
+            aura:id="participantEditor"
+            layoutType="FULL"
+            recordId="{!v.recordId}"
+            targetRecord="{!v.caseRecord}"
+            targetFields ="{!v.caseFields}"
+            targetError="{!v.caseRecordError}"
+            fields = "['Id']"
+            mode="EDIT"/>
+
+    <aura:html tag="style">
+        .modal-container
+        {
+        display: none;
+        }
+    </aura:html>
+</aura:component>

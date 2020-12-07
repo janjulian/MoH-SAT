@@ -1,0 +1,3 @@
+<apex:page standardController="Case" lightningStylesheets="true">
+    <flow:interview name="Manual_Entry_eForms"/>
+</apex:page>
