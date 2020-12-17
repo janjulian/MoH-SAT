@@ -5,6 +5,6 @@ public with sharing class ApexBasedAdjudication extends AdjudicationStrategy {
     }
 
     public override void evaluate() {
-        system.debug('apex based adjudication');
+        execApex(drug.Apex_Class__c);
     }
 }
